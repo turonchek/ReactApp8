@@ -104,8 +104,8 @@ export function SWShipsPage() {
         setStatus(`loading`);
         setError(null);
         setData([]);
-        // fetch(`https://www.swapi.tech/api/planets`)
-        fetch(`https://www.swapi.tech/api/starships?page=${currentPage}&limit=10`)
+        fetch(`https://www.swapi.tech/api/planets?page=${currentPage}&limit=10`)
+        // fetch(`https://www.swapi.tech/api/starships?page=${currentPage}&limit=10`)
             .then((res) => {
                 return res.json();
             })
