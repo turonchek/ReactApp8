@@ -111,16 +111,16 @@ export function SWShipsPage() {
             })
             .then((data) => {
                 if(mountState.isMount){
-                    setStatus(`success`);
-                    setError(null);
                     setData(data);
+                    setError(null);
+                    setStatus(`success`);
                 }
             })
             .catch((error) => {
                 if(mountState.isMount){
-                    setStatus(`error`);
                     setError(error.message);
                     setData(null);
+                    setStatus(`error`);
                 }
             });
 
