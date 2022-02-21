@@ -113,7 +113,7 @@ export function SWShipsPage() {
                 if(mountState.isMount){
                     setStatus(`success`);
                     setError(null);
-                    return setData(data);
+                    setData(data);
                 }
             })
             .catch((error) => {
