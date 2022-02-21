@@ -58,6 +58,7 @@ export function SWShipsList(props){
                                     <SWShipsItem 
                                         key={item.uid} 
                                         {...item}/>
+                                    // <div>{JSON.stringify(item)}</div>
                                 ))}
                             </ul>
                         ) : (

@@ -88,7 +88,7 @@ export function SWShipsPage() {
 
     const [status,setStatus] = useState(`initial`);
     const [error,setError] = useState(null);
-    const [data,setData] = useState(null);
+    const [data,setData] = useState([]);
     const [currentPage,setCurrentPage] = useState(1);
 
     const handlePageClick = useCallback((data)=>{
@@ -113,7 +113,7 @@ export function SWShipsPage() {
                 if(mountState.isMount){
                     setStatus(`success`);
                     setError(null);
-                    setData(data);
+                    return setData(data);
                 }
             })
             .catch((error) => {
